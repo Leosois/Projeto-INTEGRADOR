@@ -11,7 +11,7 @@ include "header.php";
                 <img src="src/img/img10.jpg" alt="produto">
 
                 <div class="botao">
-                    <button> <a href="item1.php"> Clique Aqui </a> </button>
+                    <button> <a href="item1.php"> Saiba Mais</a> </button>
                 </div>
 
             </div>
@@ -22,7 +22,7 @@ include "header.php";
                 <img src="src/img/img3.jpg" alt="produto">
 
                 <div class="botao">
-                    <button> <a href="item2.php"> Clique Aqui </a> </button>
+                    <button> <a href="item2.php"> Saiba Mais </a> </button>
                 </div>
             </div>
 
@@ -32,7 +32,7 @@ include "header.php";
                 <img src="src/img/img4.jpg" alt="produto">
 
                 <div class="botao">
-                    <button> <a href="item3.php"> Clique Aqui </a> </button>
+                    <button> <a href="item3.php"> Saiba Mais </a> </button>
                 </div>
             </div>
 
@@ -42,7 +42,7 @@ include "header.php";
                 <img src="src/img/img5.jpg" alt="produto">
 
                 <div class="botao">
-                    <button> <a href="item4.php"> Clique Aqui </a> </button>
+                    <button> <a href="item4.php"> Saiba Mais </a> </button>
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@ include "header.php";
                 <img src="src/img/img6.jpg" alt="produto">
 
                 <div class="botao">
-                    <button> <a href="item5.php"> Clique Aqui </a> </button>
+                    <button> <a href="item5.php"> Saiba Mais </a> </button>
                 </div>
             </div>
 
@@ -64,7 +64,7 @@ include "header.php";
                 <img src="src/img/img7.jpg" alt="produto">
 
                 <div class="botao">
-                    <button> <a href="item6.php"> Clique Aqui </a> </button>
+                    <button> <a href="item6.php"> Saiba Mais </a> </button>
                 </div>
             </div>
 
@@ -74,7 +74,7 @@ include "header.php";
                 <img src="src/img/img8.jpg" alt="produto">
 
                 <div class="botao">
-                    <button> <a href="item7.php"> Clique Aqui </a> </button>
+                    <button> <a href="item7.php"> Saiba Mais </a> </button>
                 </div>
             </div>
 
@@ -84,12 +84,34 @@ include "header.php";
                 <img src="src/img/img9.jpg" alt="produto">
 
                 <div class="botao">
-                    <button> <a href="item8.php"> Clique Aqui </a> </button>
+                    <button> <a href="item8.php"> Saiba Mais </a> </button>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+document.getElementById('search').addEventListener('keyup', function() {
+    const termo = this.value;
+
+    if (termo.length === 0) {
+        document.getElementById('resultados').style.display = 'none';
+        return;
+    }
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'buscar.php?q=' + encodeURIComponent(termo), true);
+    xhr.onload = function() {
+        if (this.status === 200) {
+            const resultados = document.getElementById('resultados');
+            resultados.innerHTML = this.responseText;
+            resultados.style.display = 'block';
+        }
+    };
+    xhr.send();
+});
+</script>
 
 <?php
 include "footer.php";

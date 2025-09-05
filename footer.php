@@ -18,7 +18,7 @@ echo '        </div>';
 
 echo '        <div class="contatos">';
 echo '            <h3>Contatos</h3>';
-echo '            <p>Email: contato@descarteconsciente.com.br</p>';
+echo '            <p>Email: contato@ecobit.com.br</p>';
 echo '            <p>Telefone: (11) 4455-5678</p>';
 echo '            <p>Turma TI 100 Senac, SP</p>';
 echo '        </div>';
@@ -31,11 +31,10 @@ echo '            <a href="" target="_blank">Twitter (X)</a>';
 echo '        </div>';
 
 echo '        <div class="direitos">';
-echo '            <p>Descarte Consciente - Todos os Direitos Reservados</p>';
+echo '            <p>EcoBit - Todos os Direitos Reservados</p>';
 echo '        </div>';
 echo '    </div>';
 echo '</footer>';
-
 echo '</body>';
 echo '</html>';
 ?>

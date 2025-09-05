@@ -1,8 +1,10 @@
 <?php include 'header.php'; ?>
 
-<h2>Cadastre-se</h2>
+
 
 <form action="processar.php" method="POST">
+<h2>Cadastre-se</h2>
+
     <label for="nome">Nome:</label><br>
     <input type="text" id="nome" name="nome" required><br><br>
 

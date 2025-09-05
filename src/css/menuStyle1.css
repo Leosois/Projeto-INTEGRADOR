@@ -24,6 +24,7 @@ header {
     text-align: center;
     padding: 30px;
 
+
 }
 
 section .menu {
@@ -182,7 +183,7 @@ a {
     padding: 20px;
     font-size: 16px;
     border: 2px solid #ccc;
-    border-radius: 5px 0 0 5px;
+    border-radius: 10px 10px 10px 10px;
     outline: none;
     transition: border-color 0.3s ease;
     height: 50px;
@@ -462,6 +463,82 @@ a {
     color: #444;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+/* Estilo básico para o corpo da página */
+
+
+/* Centraliza e dá estilo ao formulário */
+form {
+    background-color: rgb(65, 83, 136);
+    max-width: 300px;
+    margin: 40px auto;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Estilo do título */
+h2 {
+    text-align: center;
+    color: white
+}
+
+/* Estilo dos labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: white
+}
+
+/* Estilo dos inputs */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Estilo do botão de submit */
+input[type="submit"] {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+#resultados {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 300px;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+    z-index: 1000;
+}
+
+#resultados div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#resultados div:hover {
+    background-color: #f0f0f0;
+}
+
+
 footer {
     background-color: rgb(65, 83, 136);
     color: white;
@@ -484,3 +561,4 @@ footer {
         box-shadow: none;
     }
 }
+
