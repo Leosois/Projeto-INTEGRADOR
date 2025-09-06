@@ -1,9 +1,8 @@
 <?php include 'header.php'; ?>
 
 
-
-<form action="processar.php" method="POST">
-<h2>Entre</h2>
+<div class="formulario"><form action="processar.php" method="POST">
+<h2>Faça seu Login</h2>
     
 
     <label for="email">E-mail:</label><br>
@@ -16,5 +15,5 @@
 
     <input type="submit" value="Enviar">
 </form>
-
+</div>
 <?php include 'footer.php'; ?>

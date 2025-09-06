@@ -13,7 +13,7 @@ echo '<footer>';
 echo '    <div class="rodape">';
 echo '        <div class="sobre-nos">';
 echo '            <h3>Sobre Nós</h3>';
-echo '            <p>Somos a Descarte Consciente, uma iniciativa dedicada à coleta e reciclagem de Computadores, dedicada em promover um grande impacto social.</p>';
+echo '            <p>Somos a Ecobit, uma iniciativa dedicada à coleta e reciclagem de Computadores, dedicada em promover um grande impacto social.</p>';
 echo '        </div>';
 
 echo '        <div class="contatos">';

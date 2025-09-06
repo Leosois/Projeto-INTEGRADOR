@@ -1,8 +1,7 @@
 <?php include 'header.php'; ?>
 
 
-
-<form action="processar.php" method="POST">
+<div class="formulario"><form action="processar.php" method="POST">
 <h2>Cadastre-se</h2>
 
     <label for="nome">Nome:</label><br>
@@ -28,5 +27,5 @@
 
     <input type="submit" value="Enviar">
 </form>
-
+</div>
 <?php include 'footer.php'; ?>

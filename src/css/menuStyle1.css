@@ -67,12 +67,12 @@ nav button:hover {
     background-color: rgb(0, 110, 255);
 }
 
-nav a  {
+nav a {
     padding: 20px;
     text-decoration: none;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .principal {
@@ -388,7 +388,7 @@ a {
 .rodape {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     max-width: 1000px;
 }
@@ -422,6 +422,7 @@ a {
     font-size: 14px;
     color: white;
 }
+
 .rodape div {
     text-align: center;
 }
@@ -463,61 +464,74 @@ a {
     color: #444;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-/* Estilo básico para o corpo da página */
 
-
-/* Centraliza e dá estilo ao formulário */
-form {
+.formulario {
     background-color: rgb(65, 83, 136);
-    max-width: 300px;
-    margin: 40px auto;
-    padding: 50px;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(55, 103, 165, 0.2);
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto;
+    color: white;
 }
 
-/* Estilo do título */
+
 h2 {
+    margin-bottom: 20px;
     text-align: center;
     color: white
 }
 
-/* Estilo dos labels */
 label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 0px;
     font-weight: bold;
     color: white
 }
 
-/* Estilo dos inputs */
+input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+textarea {
     width: 100%;
-    padding: 10px 8px;
-    margin-bottom: 20px;
+    padding: 8px;
+    margin-bottom: 5px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 14px;
+    border-radius: 5px;
+    transition: border-color 0.2s ease;
 }
 
-/* Estilo do botão de submit */
+input:focus,
+textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 10px;
+}
+
 input[type="submit"] {
-    width: 100%;
-    background-color: #007bff;
+    background-color: #4CAF50;
     color: white;
-    font-size: 16px;
     padding: 12px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #45a049;
 }
+
 #resultados {
     position: absolute;
     background-color: white;
@@ -552,13 +566,20 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .preco-container {
-        position: static;
-        transform: none;
-        width: 100%;
-        margin: 20px auto;
-        border-radius: 0;
-        box-shadow: none;
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .principal {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .btn {
+        margin: 10px 0;
     }
 }
-

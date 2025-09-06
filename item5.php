@@ -43,9 +43,9 @@ include "header.php";
             <div class="desc">
                 <div class="preco-original">de R$ 2,429,00 por</div>
 
-                <div class="preco-pix">R$ 1,999,00</div>
+                <div class="preco-pix">R$ 1,214,50</div>
 
-                <div class="desconto-info">no PIX com 15% de desconto</div>
+                <div class="desconto-info">na troca do seu usado 50% de desconto</div>
 
                 <div class="ou">ou</div>
 
