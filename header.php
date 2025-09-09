@@ -10,11 +10,14 @@ echo '<body>';
 echo '    <header>';
 echo '        <div class="principal">';
 echo '            <a href="index.php" class="logo"><img src="src/img/logo.png" alt="logo-menu">EcoBit</a>';
-echo '            <div class="search-container">'; // nova classe CSS
-echo '                <input type="text" id="search" placeholder="Digite sua pesquisa..." autocomplete="off">';
-echo '                <div id="resultados"></div>';
+echo '<div class="search-container">';
+echo '    <input type="text" id="search" placeholder="Digite sua pesquisa..." autocomplete="off">';
+echo '    <button type="button" class="search-button">';
+echo '        <img src="" alt="Buscar">';
+echo '    </button>';
+echo '    <div id="resultados"></div>';
+echo '</div>';
 
-echo '            </div>';           
 echo '                <p class="login">Olá, <a href="login.php">Entre</a> ou <br><a href="cadastrar.php">Cadastre-se</a></p>';
 echo '        </div>';
 echo '        <nav>';

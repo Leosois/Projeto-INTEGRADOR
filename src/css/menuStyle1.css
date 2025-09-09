@@ -153,17 +153,18 @@ a {
 }
 .item img {
     transition: all 0.3s ease;
-    border-radius: 8px; 
+    background-color: (65, 83, 136);
+    height: 140px; 
     
     
 }
 
-.item img:hover {
-    box-shadow: inset -3px -3px 10px rgba(255,255,255,0.5),
-                inset 3px 3px 10px rgba(0,0,0,0.2),
-                0 10px 20px rgba(0, 0, 0, 0.25);
+.item:hover {
+    box-shadow: inset -3px -3px 10px rgba(65, 83, 136,0.5),
+                inset 3px 3px 10px rgba(65, 83, 136, 0.2),
+                0 10px 20px rgba(65, 83, 136, 0.25);
     transform: scale(1.03);
-    background-color: rgb(65, 83, 136); 
+     
 }
 
 
@@ -174,6 +175,8 @@ a {
     align-items: center;
     justify-content: center;
     width: 250px;
+    
+    
     
 }
 
@@ -195,14 +198,22 @@ a {
 }
 
 .itemIMG {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
+    transition: all 0.3s ease;
+    rgb(65, 83, 136);
     
 }
 
 
-.itemIMG:hover {
+.itemImg:hover {
     animation: blink 0.2s linear 1;
+    box-shadow: inset -3px -3px 10px rgba(65, 83, 136,0.5),
+                inset 3px 3px 10px rgba(65, 83, 136,0.2),
+                0 10px 20px rgba(65, 83, 136, 0.25);
+    transform: scale(1.03);
+    border-radius: 10px 10px 10px 10px;
+
 }
 
 
@@ -227,13 +238,19 @@ a {
 }
 
 .search-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  position: relative;
+  width: 800px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden; /* Para o botão não "sair" da borda */
+  border: 1px solid #ccc;
+  margin-right: 50px;
 }
 
 .search-container input[type="text"] {
-    width: 700px;
+    width: 800px;
     padding: 20px;
     font-size: 16px;
     border: 2px solid #ccc;
@@ -241,34 +258,41 @@ a {
     outline: none;
     transition: border-color 0.3s ease;
     height: 50px;
-    margin-right: 80px;
+    
     
     
 
+}
+#search {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  font-size: 14px;
+  outline: none;
 }
 
 .search-container input[type="text"]:focus {
-    border-color: #4CAF50;
+    border-color: rgb(65, 83, 136);
+    margin-left: 800px;
+
 }
 
-.search-container button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-left: none;
-    border-radius: 0 5px 5px 0;
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 90px;
-    height: 50px;
-
+.search-button {
+  background-color: white;
+  border: none;
+  border-left: 1px solid #ccc;
+  color: #3b5998;
+  padding: 0 15px;
+  height: 100%;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .search-container button:hover {
-    background-color: #45a049;
+    background-color: #317a7c;
+    
 }
+
 
 .painel {
     display: flex;
