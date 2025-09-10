@@ -13,14 +13,14 @@ include "header.php";
             <div class="titulo">
 
                 <h2> PC Gamer T-Gamer Hawk intel i5 10400F</h2>
-                
+
             </div>
 
             <div class="img">
                 <img class="itemIMG" src="src/img/img10.jpg" alt="">
             </div>
 
-           
+
 
         </div>
 
@@ -40,7 +40,7 @@ include "header.php";
                 <p>SSD 250GB</p>
             </div>
 
-            <div class="desc">
+            <div class="desc" data-nome="Produto Exemplo" data-id="1234">
                 <div class="preco-original">de R$ 4.601,30 por</div>
 
                 <div class="preco-pix">R$ 2.300,65</div>
@@ -57,32 +57,21 @@ include "header.php";
                     </div>
                 </div>
 
-                
-
                 <button class="pagamento-button comprar-button">
                     <div style="display: flex; align-items: center;">
                         <span class="icon">&#128722;</span> COMPRAR
                     </div>
-                    
                 </button>
             </div>
+
 
 
 
         </div>
 </section>
 
-
-
-
-
-
-
-
-
 </div>
 
 <?php
 include "footer.php";
 ?>
-
