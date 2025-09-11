@@ -27,13 +27,6 @@ Ao optar pela troca do seu computador usado, você:
  <h3>Sustentabilidade é mais do que reciclar — é repensar</h3>
  <p>Acreditamos que sustentabilidade não é apenas sobre o que descartamos, mas sobre como consumimos. Trocar em vez de descartar é um pequeno gesto que gera grandes mudanças. E, ao fazer isso com a gente, você faz parte de uma comunidade que valoriza a tecnologia responsável, a economia circular e um futuro mais verde.</p>
 
-
-
-
-
-
-
-
 </div>';
 
 include 'footer.php';
