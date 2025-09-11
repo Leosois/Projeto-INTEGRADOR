@@ -2,7 +2,7 @@
 $host = "localhost";
 $usuario = "root";      
 $senha = "";             
-$banco = "loja_ecobit";
+$banco = "eco_bit";
 
 $conn = new mysqli($host, $usuario, $senha, $banco);
 

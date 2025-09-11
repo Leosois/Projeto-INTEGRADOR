@@ -6,7 +6,7 @@ include "header.php";
     <div class="item4x4">
         <div class="coll-1">
             <div class="item">
-                <h3> PC Gamer T-Gamer Hawk</h3>
+                <h3> PC T-Gamer Hawk</h3>
 
                 <img src="src/img/img10.jpg" alt="produto">
 

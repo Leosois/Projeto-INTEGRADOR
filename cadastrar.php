@@ -16,8 +16,8 @@
     <label for="endereco">Endereço:</label><br>
     <textarea id="endereco" name="endereco" required></textarea><br><br>
 
-    <label for="dataDeNascimento">Data de Nascimento:</label><br>
-    <input type="date" id="dataDeNascimento" name="dataDeNascimento" required><br><br>
+    <label for="idade">Data de Nascimento:</label><br>
+    <input type="date" id="idade" name="idade" required><br><br>
 
     <label for="cpf">CPF:</label><br>
     <input type="text" id="cpf" name="cpf" required><br><br>

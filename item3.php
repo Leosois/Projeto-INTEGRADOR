@@ -61,7 +61,7 @@ include "header.php";
 
                 <button class="pagamento-button comprar-button">
                     <div style="display: flex; align-items: center;">
-                        <span class="icon">&#128722;</span> COMPRAR
+                    <h4 class="comprar1">Comprar</h4>
                     </div>
                     
                 </button>

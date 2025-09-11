@@ -20,20 +20,14 @@ echo <<<HTML
         Transparência em cada etapa do processo
     </p>
 
-    <!-- Barra de busca e botão -->
-    <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Buscar atendimento..." />
-        <button onclick="searchHandler()">Buscar</button>
-    </div>
-
-    <!-- Abas -->
+    
     <div class="tabs">
         <div class="tab active" onclick="showTab('sugestoes')">Sugestões</div>
         <div class="tab" onclick="showTab('contatos')">Contatos</div>
         <div class="tab" onclick="showTab('reclamacoes')">Reclamações</div>
     </div>
 
-    <!-- Conteúdo das Abas -->
+    
     <div id="sugestoes" class="tab-content active">
         <h3>Envie suas sugestões</h3>
         <p>Tem alguma ideia para melhorar nossos serviços? Adoraríamos ouvir você!</p>

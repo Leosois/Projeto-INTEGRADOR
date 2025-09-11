@@ -9,7 +9,7 @@
  $senha = $_POST['senha'];
 
  // Inserir ao banco
- $sql = "INSERT INTO LOGIN (nome, cpf, endereco, idade, email, senha) VALUES ('$nome', '$cpf', '$endereco', '$idade', '$email', '$senha')";
+ $sql = "INSERT INTO cadastro (nome, cpf, endereco, idade, email, senha) VALUES ('$nome', '$cpf', '$endereco', '$idade', '$email', '$senha')";
 
  if ($conexao->query($sql) === TRUE) {
     echo "login realizado com sucesso!";
