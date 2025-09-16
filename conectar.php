@@ -4,10 +4,10 @@ $usuario = "root";
 $senha = "";             
 $banco = "eco_bit";
 
-$conn = new mysqli($host, $usuario, $senha, $banco);
+$conexao = new mysqli($host, $usuario, $senha, $banco);
 
 
-if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
+if ($conexao->connect_error) {
+    die("Erro na conexão: " . $conexao->connect_error);
 }
 ?>

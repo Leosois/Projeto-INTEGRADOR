@@ -143,6 +143,38 @@ a {
 
 
 }
+.loginp {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    color: rgb(65, 83, 136);
+    font-family: Arial, Helvetica, sans-serif;
+    height: 585px;
+}
+.cadastroOk {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    height: 620px;
+    color: rgb(65, 83, 136);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.loginTexto {
+    background-color: rgb(65, 83, 136);;
+    margin-top: 250px;
+    height: 50px;
+    width: 190px;
+    border-radius: 15px;
+}
+.loginTexto h2{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+}
 
 .btn {
     display: flex;
@@ -223,7 +255,7 @@ a {
     width: 350px;
     height: 350px;
     transition: all 0.3s ease;
-    rgb(65, 83, 136);
+    
 
 }
 
