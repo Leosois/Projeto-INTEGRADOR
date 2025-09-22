@@ -31,7 +31,7 @@ include "header.php";
 
             <div class="desc">
                 <h2>Processador</h2>
-                <p>Intel i6 6700F</p>
+                <p>Intel i7 6700F</p>
                 <h2>Placa de Video</h2>
                 <p>Nvidia Geforce Rtx 3050</p>
                 <h2>Memória</h2>
@@ -72,6 +72,7 @@ include "header.php";
 </section>
 
 </div>
+
 
 <?php
 include "footer.php";

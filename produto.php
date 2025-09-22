@@ -1,24 +1,53 @@
 <?php
+include "header.php";
 require_once 'conectar.php'; // AJUSTADO
 
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 
 $sql = "SELECT * FROM produtos WHERE id = $id";
-$result = $conn->query($sql);
+$result = $conexao->query($sql);
 
 if ($result->num_rows == 1) {
-    $produto = $result->fetch_assoc();
-    echo "<h1>" . htmlspecialchars($produto['nome']) . "</h1>";
-    echo "<img src='" . htmlspecialchars($produto['imagem']) . "' width='300'><br>";
-    echo "<p><strong>Preço:</strong> R$ " . number_format($produto['preco'], 2, ',', '.') . "</p>";
-    echo "<p><strong>Descrição:</strong> " . $produto['descricao'] . "</p>";
-    echo "<p><strong>Processador:</strong> " . $produto['processador'] . "</p>";
-    echo "<p><strong>Placa de Vídeo:</strong> " . $produto['placa_video'] . "</p>";
-    echo "<p><strong>Memória:</strong> " . $produto['memoria'] . "</p>";
-    echo "<p><strong>Armazenamento:</strong> " . $produto['armazenamento'] . "</p>";
+    $produtos = $result->fetch_assoc();
+
+    echo "<h1>" . htmlspecialchars($produtos['nome']) . "</h1>";
+    echo "<img src='" . htmlspecialchars($produtos['imgProduto']) . "' width='300'><br>";
+    echo "<p><strong>Preço:</strong> R$ " . number_format($produtos['preco'], 2, ',', '.') . "</p>";
+    echo "<p><strong>Descrição:</strong> " . $produtos['descricao'] . "</p>";
 } else {
     echo "<p>Produto não encontrado.</p>";
 }
+?>
 
-$conn->close();
+<script>
+document.getElementById('search').addEventListener('keyup', function () {
+    const termo = this.value.trim();
+
+    if (termo.length === 0) {
+        document.getElementById('resultados').style.display = 'none';
+        return;
+    }
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'buscar.php?q=' + encodeURIComponent(termo), true);
+    xhr.onload = function () {
+        const resultados = document.getElementById('resultados');
+
+        if (this.status === 200) {
+            resultados.innerHTML = this.responseText;
+            resultados.style.display = 'block';
+        } else {
+            resultados.innerHTML = '<div>Erro ao buscar</div>';
+            resultados.style.display = 'block';
+        }
+    };
+    xhr.send();
+});
+</script>
+
+
+<?php
+$conexao->close();
+
+include "footer.php";
 ?>

@@ -72,6 +72,28 @@ include "header.php";
 
 </div>
 
+<script>
+document.getElementById('search').addEventListener('keyup', function() {
+    const termo = this.value;
+
+    if (termo.length === 0) {
+        document.getElementById('resultados').style.display = 'none';
+        return;
+    }
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'buscar.php?q=' + encodeURIComponent(termo), true);
+    xhr.onload = function() {
+        if (this.status === 200) {
+            const resultados = document.getElementById('resultados');
+            resultados.innerHTML = this.responseText;
+            resultados.style.display = 'block';
+        }
+    };
+    xhr.send();
+});
+</script>
+
 <?php
 include "footer.php";
 ?>

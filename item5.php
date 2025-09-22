@@ -41,16 +41,16 @@ include "header.php";
             </div>
 
             <div class="desc">
-                <div class="preco-original">de R$ 2,429,00 por</div>
+                <div class="preco-original">de R$ 2.429,00 por</div>
 
-                <div class="preco-pix">R$ 1,214,50</div>
+                <div class="preco-pix">R$ 1.214,50</div>
 
                 <div class="desconto-info">na troca do seu usado 50% de desconto</div>
 
                 <div class="ou">ou</div>
 
                 <div class="preco-parcelado-container">
-                    <div class="preco-parcelado">R$ 2,890,12</div>
+                    <div class="preco-parcelado">R$ 2.890,12</div>
                     <div class="parcelas-info">
                         em até 12x de <span class="parcela-valor">R$ 240,84</span><br>
                         sem juros no cartão
@@ -73,6 +73,8 @@ include "header.php";
 </section>
 
 </div>
+
+
 
 <?php
 include "footer.php";

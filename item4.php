@@ -43,7 +43,7 @@ include "header.php";
             <div class="desc">
                 <div class="preco-original">de R$ 2.601,30 por</div>
 
-                <div class="preco-pix">R$ 1,300,65</div>
+                <div class="preco-pix">R$ 1.300,65</div>
 
                 <div class="desconto-info">na troca do seu usado 50% de desconto</div>
 
@@ -73,6 +73,8 @@ include "header.php";
 </section>
 
 </div>
+
+
 
 <?php
 include "footer.php";

@@ -113,6 +113,18 @@ nav a:hover {
     transform: scale(1.05);
 }
 
+#resultados {
+    border: 1px solid #ccc;
+    max-width: 300px;
+    background: #fff;
+    position: absolute;
+    z-index: 1000;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+}
 
 .principal {
     display: flex;
@@ -608,14 +620,13 @@ a {
 
 .formulario {
     background-color: rgb(65, 83, 136);
-    padding: 20px;
+    padding: 40px;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(55, 103, 165, 0.2);
-    width: 90%;
+    width: 100%;
     max-width: 400px;
     margin: 50px auto;
     color: white;
-    margin-top: 130px;
 
 }
 
@@ -639,7 +650,7 @@ input[type="tel"],
 input[type="date"],
 input[type="password"],
 textarea {
-    width: 100%;
+    width: 382px;
     padding: 8px;
     margin-bottom: 5px;
     border: 1px solid #ccc;
@@ -684,6 +695,8 @@ input[type="submit"]:hover {
     overflow-y: auto;
     display: none;
     z-index: 1000;
+    top: 120px;
+    right:40%;
 }
 
 #resultados div {
@@ -775,6 +788,10 @@ footer {
     align-items: center;
     height: 150px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+#principal{
+    position: relative;
 }
 
 @media (max-width: 768px) {

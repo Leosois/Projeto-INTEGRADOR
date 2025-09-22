@@ -33,7 +33,7 @@ include "header.php";
                 <h2>Processador</h2>
                 <p>Intel i3 60400F</p>
                 <h2>Placa de Video</h2>
-                <p>Nvidia Geforce Rtx 1090</p>
+                <p>Nvidia Geforce Rtx 1080</p>
                 <h2>Memória</h2>
                 <p>DDR4 8GB</p>
                 <h2>Armazenamento</h2>
@@ -41,9 +41,9 @@ include "header.php";
             </div>
 
             <div class="desc">
-                <div class="preco-original">de R$ 2,559,00 por</div>
+                <div class="preco-original">de R$ 2.559,00 por</div>
 
-                <div class="preco-pix">R$ 1,279,50</div>
+                <div class="preco-pix">R$ 1.279,50</div>
 
                 <div class="desconto-info">na troca do seu usado 50% de desconto</div>
 
@@ -73,6 +73,7 @@ include "header.php";
 </section>
 
 </div>
+
 
 <?php
 include "footer.php";

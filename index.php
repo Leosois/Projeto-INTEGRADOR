@@ -7,84 +7,60 @@ include "header.php";
         <div class="coll-1">
             <div class="item">
                 <h3> PC T-Gamer Hawk</h3>
-
                 <img src="src/img/img10.jpg" alt="produto">
-
                 <div class="botao">
-                    <button> <a href="item1.php"> Saiba Mais</a> </button>
+                    <button><a href="item1.php">Saiba Mais</a></button>
                 </div>
-
             </div>
-
             <div class="item">
                 <h3>Intel Core i7 6ª</h3>
-
                 <img src="src/img/img3.jpg" alt="produto">
-
                 <div class="botao">
-                    <button> <a href="item2.php"> Saiba Mais </a> </button>
+                    <button><a href="item2.php">Saiba Mais</a></button>
                 </div>
             </div>
-
             <div class="item">
                 <h3>Intel Core i7 10ª</h3>
-
                 <img src="src/img/img4.jpg" alt="produto">
-
                 <div class="botao">
-                    <button> <a href="item3.php"> Saiba Mais </a> </button>
+                    <button><a href="item3.php">Saiba Mais</a></button>
                 </div>
             </div>
-
             <div class="item">
                 <h3>PC Gamer Core i3 10ª</h3>
-
                 <img src="src/img/img5.jpg" alt="produto">
-
                 <div class="botao">
-                    <button> <a href="item4.php"> Saiba Mais </a> </button>
+                    <button><a href="item4.php">Saiba Mais</a></button>
                 </div>
             </div>
         </div>
-
         <div class="coll-2">
             <div class="item">
                 <h3>Intel Core i3 7ª</h3>
-
                 <img src="src/img/img6.jpg" alt="produto">
-
                 <div class="botao">
-                    <button> <a href="item5.php"> Saiba Mais </a> </button>
+                    <button><a href="item5.php">Saiba Mais</a></button>
                 </div>
             </div>
-
             <div class="item">
                 <h3>Intel Core i5 10ª</h3>
-
                 <img src="src/img/img7.jpg" alt="produto">
-
                 <div class="botao">
-                    <button> <a href="item6.php"> Saiba Mais </a> </button>
+                    <button><a href="item6.php">Saiba Mais</a></button>
                 </div>
             </div>
-
             <div class="item">
                 <h3>Intel Core i9 10ª</h3>
-
                 <img src="src/img/img8.jpg" alt="produto">
-
                 <div class="botao">
-                    <button> <a href="item7.php"> Saiba Mais </a> </button>
+                    <button><a href="item7.php">Saiba Mais</a></button>
                 </div>
             </div>
-
             <div class="item">
                 <h3>Intel Core i3 12ª</h3>
-
                 <img src="src/img/img9.jpg" alt="produto">
-
                 <div class="botao">
-                    <button> <a href="item8.php"> Saiba Mais </a> </button>
+                    <button><a href="item8.php">Saiba Mais</a></button>
                 </div>
             </div>
         </div>
@@ -92,24 +68,43 @@ include "header.php";
 </section>
 
 <script>
-document.getElementById('search').addEventListener('keyup', function() {
-    const termo = this.value;
+document.addEventListener('DOMContentLoaded', (event) => {
+    const searchInput = document.getElementById('search');
+    const resultadosDiv = document.getElementById('resultados');
+    const busca = document.getElementById('busca');
 
-    if (termo.length === 0) {
-        document.getElementById('resultados').style.display = 'none';
+    if (!searchInput || !resultadosDiv) {
+        console.error('Elementos de busca não encontrados.');
         return;
     }
 
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'buscar.php?q=' + encodeURIComponent(termo), true);
-    xhr.onload = function() {
-        if (this.status === 200) {
-            const resultados = document.getElementById('resultados');
-            resultados.innerHTML = this.responseText;
-            resultados.style.display = 'block';
+    busca.addEventListener('click', function() {
+
+        const termo = searchInput.value;
+
+        if (termo.length === 0) {
+            document.getElementById('resultados').style.display = 'none';
+            return;
         }
-    };
-    xhr.send();
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'buscar.php?q=' + encodeURIComponent(termo), true);
+        xhr.onload = function() {
+            if (this.status === 200) {
+                const resultados = document.getElementById('resultados');
+                resultados.innerHTML = this.responseText;
+                resultados.style.display = 'block';
+            }
+        };
+        xhr.send();
+
+    // document.addEventListener('click', function (e) {
+    //     const isClickInside = searchInput.contains(e.target) || resultadosDiv.contains(e.target);
+    //     if (!isClickInside) {
+    //         resultadosDiv.style.display = 'none';
+    //     }
+    // });
+});
 });
 </script>
 
