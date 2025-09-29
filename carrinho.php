@@ -1,6 +1,8 @@
 <?php
 session_start();
 $carrinho = $_SESSION['carrinho'] ?? [];
+
+
 ?>
 
 <!DOCTYPE html>
@@ -26,24 +28,26 @@ $carrinho = $_SESSION['carrinho'] ?? [];
     <?php
     $total = 0;
     foreach ($carrinho as $item):
-      $subtotal = $item['preco'] * $item['quantidade'];
+      $preco= $item['preco'];
+      $subtotal = $preco * $item['quantidade'];
+       
       $total += $subtotal;
     ?>
       <tr>
-        <td><?= htmlspecialchars($item['nome']) ?></td>
-        <td>R$ <?= number_format($item['preco'], 2, ',', '.') ?></td>
-        <td><?= $item['quantidade'] ?></td>
-        <td>R$ <?= number_format($subtotal, 2, ',', '.') ?></td>
+        <td><?php echo htmlspecialchars($item['nome']); ?></td>
+        <td><?php echo $item['preco']; ?></td>
+        <td><?php echo $item['quantidade']; ?></td>
+       
       </tr>
     <?php endforeach; ?>
     <tr>
       <td colspan="3"><strong>Total Geral:</strong></td>
-      <td><strong>R$ <?= number_format($total, 2, ',', '.') ?></strong></td>
+      <td><strong>R$ <?php echo $subtotal; ?></strong></td>
     </tr>
   </table>
 <?php endif; ?>
 
-<a href="produto.php">← Continuar comprando</a>
+<a href="index.php">← Continuar comprando</a>
 
 </body>
 </html>

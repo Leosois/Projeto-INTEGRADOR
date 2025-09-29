@@ -1,0 +1,98 @@
+header img {
+    max-width: 150px;
+    max-height: 170px;
+
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(65, 83, 136);
+    height: 130px;
+    padding: 20px 0;
+    text-align: center;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.container-produto {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.container-produto h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    margin-top: 15px;
+    align-items: center;
+
+}
+.caixa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: large;
+    margin-top: 15px;
+    height: 700px;
+    
+}
+.container-produto img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px auto;
+    border-radius: 4px;
+}
+
+.container-produto p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.container-produto p strong {
+    color: #222;
+    font-weight: bold;
+}
+
+#resultados {
+    display: none;
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ddd;
+    width: 300px;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 5px;
+    padding: 10px;
+    z-index: 1000;
+}
+footer {
+    background-color: rgb(65, 83, 136);
+    color: white;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+
+
+    
+}

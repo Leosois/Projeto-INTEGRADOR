@@ -1,7 +1,14 @@
 <?php
+echo '<!DOCTYPE html>';
+echo '<html lang="pt-br">';
+echo '<head>';
+    echo '<link rel="stylesheet" href="src/css/menuStyle1.css">';
+    echo '<link rel="stylesheet" href="src/css/menuStyle2.css">';
+    
+echo '</head>';
 include "header.php";
 require_once 'conectar.php'; // AJUSTADO
-
+echo '<div class="caixa">';
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 
 $sql = "SELECT * FROM produtos WHERE id = $id";
@@ -16,6 +23,7 @@ if ($result->num_rows == 1) {
     echo "<p><strong>Descrição:</strong> " . $produtos['descricao'] . "</p>";
 } else {
     echo "<p>Produto não encontrado.</p>";
+    echo '</div>';
 }
 ?>
 

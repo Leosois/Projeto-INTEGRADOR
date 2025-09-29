@@ -59,12 +59,18 @@ include "header.php";
 
                
 
-                <button class="pagamento-button comprar-button">
+                <form action="adicionar_carrinho.php" method="POST">
+                <input type="hidden" name="produto_id" value="04">
+                <input type="hidden" name="nome" value="PC Gamer intel Core i3 10400F">
+                <input type="hidden" name="preco" value="2601.30">
+
+                <button type="submit" class="pagamento-button comprar-button">
                     <div style="display: flex; align-items: center;">
                     <h4 class="comprar1">Comprar</h4>
                     </div>
                     
                 </button>
+            </form>
             </div>
 
 
