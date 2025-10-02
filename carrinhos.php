@@ -24,6 +24,7 @@
       <input type="hidden" name="nome" value="Produto Exemplo">
       <input type="hidden" name="preco" value="3200.20">
       <button type="submit" class="botao-comprar">🛒 COMPRAR</button>
+      
     </form>
   </div>
 

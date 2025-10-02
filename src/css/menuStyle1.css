@@ -66,15 +66,26 @@ section .cadastro {
 
 
 button {
-    width: 80px;
-    height: 20px;
+    width: 150px;
+    height: 50px;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(65, 83, 136);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    align-items: center;
+    
+    
+}
+.butao{
+    margin-left: 40%;
 }
 
 button a {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
+    color: white
+
 
 }
 

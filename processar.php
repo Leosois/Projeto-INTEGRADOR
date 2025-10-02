@@ -5,21 +5,20 @@ if (
     isset($_POST['nome']) &&
     isset($_POST['cpf']) &&
     isset($_POST['endereco']) &&
-    isset($_POST['idade']) && // este campo agora é o ano de nascimento
+    isset($_POST['data_nascimento']) &&
     isset($_POST['email']) &&
     isset($_POST['senha'])
 ) {
     $nome = $_POST['nome'];
     $cpf = $_POST['cpf'];
     $endereco = $_POST['endereco'];
-    $ano_nascimento = $_POST['idade']; // ainda vindo do mesmo campo
+    $data_nascimento = $_POST['data_nascimento'];
+
     $email = $_POST['email'];
-    $senha = md5( $_POST['senha'] );
+    $senha = $_POST['senha'];
 
- 
-
-    // Calcular a idade
-    $idade = date('Y') - intval($ano_nascimento);
+    // Criptografa a senha
+    $senha_cript = md5($senha); // Em produção, use password_hash
 
     // Verificar duplicidade de CPF
     $verificaCpf = $conexao->prepare("SELECT id FROM cadastro WHERE cpf = ?");
@@ -29,37 +28,40 @@ if (
 
     if ($verificaCpf->num_rows > 0) {
         echo "Erro: Este CPF já está cadastrado.";
-    } else {
-        // Verificar duplicidade de e-mail
-        $verificaEmail = $conexao->prepare("SELECT id FROM cadastro WHERE email = ?");
-        $verificaEmail->bind_param("s", $email);
-        $verificaEmail->execute();
-        $verificaEmail->store_result();
+        $verificaCpf->close();
+        $conexao->close();
+        exit;
+    }
+    $verificaCpf->close();
 
-        if ($verificaEmail->num_rows > 0) {
-            echo "Erro: Este e-mail já está cadastrado.";
-        } else {
-            // Inserir no banco
-            $stmt = $conexao->prepare("INSERT INTO cadastro (nome, cpf, endereco, idade, email, senha) VALUES (?, ?, ?, ?, ?, ?)");
-            $stmt->bind_param( 'ssssss',$nome, $cpf, $endereco, $ano_nascimento, $email, $senha );
+    // Verificar duplicidade de e-mail
+    $verificaEmail = $conexao->prepare("SELECT id FROM cadastro WHERE email = ?");
+    $verificaEmail->bind_param("s", $email);
+    $verificaEmail->execute();
+    $verificaEmail->store_result();
 
-            if ($stmt->execute()) {
-                echo "<script> location.href='./cadastroOk.php'; </script>";
-            } else {
-                echo "Erro ao cadastrar: " . $stmt->error;
-            }
-
-            $stmt->close();
-        }
+    if ($verificaEmail->num_rows > 0) {
+        echo "Erro: Este e-mail já está cadastrado.";
         $verificaEmail->close();
+        $conexao->close();
+        exit;
+    }
+    $verificaEmail->close();
+
+    // Inserir no banco
+    $stmt = $conexao->prepare("INSERT INTO cadastro (nome, cpf, endereco, data_nascimento, email, senha) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssss", $nome, $cpf, $endereco, $data_nascimento, $email, $senha_cript);
+
+    if ($stmt->execute()) {
+        header('Location: cadastroOk.php');
+        exit;
+    } else {
+        echo "Erro ao cadastrar: " . $stmt->error;
     }
 
-    $verificaCpf->close();
+    $stmt->close();
     $conexao->close();
-
 } else {
     echo "Erro: Todos os campos são obrigatórios.";
 }
 ?>
-
-

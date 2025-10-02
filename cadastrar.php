@@ -1,8 +1,8 @@
 <?php include 'header.php'; ?>
 
-
-<div class="formulario"><form action="processar.php" method="POST">
-<h2>Cadastre-se</h2>
+<div class="formulario">
+  <form action="processar.php" method="POST">
+    <h2>Cadastre-se</h2>
 
     <label for="nome">Nome:</label><br>
     <input type="text" id="nome" name="nome" required><br><br>
@@ -10,14 +10,12 @@
     <label for="email">E-mail:</label><br>
     <input type="email" id="email" name="email" required><br><br>
 
-    <label for="telefone">Telefone:</label><br>
-    <input type="tel" id="telefone" name="telefone" required><br><br>
-
     <label for="endereco">Endereço:</label><br>
     <textarea id="endereco" name="endereco" required></textarea><br><br>
 
-    <label for="idade">Data de Nascimento:</label><br>
-    <input type="date" id="idade" name="idade" required><br><br>
+    <label for="data_nascimento">Data de Nascimento:</label><br>
+    <input type="date" id="data_nascimento" name="data_nascimento" required><br><br>
+
 
     <label for="cpf">CPF:</label><br>
     <input type="text" id="cpf" name="cpf" required><br><br>
@@ -26,6 +24,7 @@
     <input type="password" id="senha" name="senha" required><br><br>
 
     <input type="submit" value="Enviar">
-</form>
+  </form>
 </div>
+
 <?php include 'footer.php'; ?>

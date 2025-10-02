@@ -1,0 +1,117 @@
+/* Estilo geral do corpo, mantido do seu modelo */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    /* Remover padding do body se o header/footer não estiverem usando position: fixed; */
+    padding: 0; 
+    margin: 0;
+}
+
+/* ---------------------------------------------------- */
+/* CONTAINER PRINCIPAL PARA ISOLAR O CONTEÚDO DO CARRINHO */
+/* ---------------------------------------------------- */
+.carrinho-container {
+    max-width: 1000px; /* Largura máxima para centralizar o conteúdo */
+    margin: 40px auto; /* Afasta o container do header e footer e centraliza horizontalmente */
+    padding: 20px;
+    background-color: #fff; /* Fundo branco para o container */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Estilos de título */
+h2 {
+    text-align: center;
+    color: #444;
+    margin-top: 0; /* Remove margem superior desnecessária dentro do container */
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Estilos de tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Removido box-shadow e background-color da tabela, pois estão no .carrinho-container */
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: rgb(65, 83, 136);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos para a linha do Total Geral */
+td strong {
+    font-size: 1.1em;
+}
+
+/* ---------------------------------------------------- */
+/* ESTILOS PARA OS BOTÕES/LINKS DE AÇÃO */
+/* ---------------------------------------------------- */
+
+.acoes-carrinho {
+    display: flex; /* Para colocar os links lado a lado */
+    justify-content: space-between; /* Espaçamento entre os links */
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    margin-top: 30px;
+}
+
+.acoes-carrinho a {
+    display: block; /* Garante que o link ocupe o espaço para o qual foi definido */
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Link "Continuar Comprando" (Padrão) */
+.acoes-carrinho a:first-child { 
+    color: rgb(65, 83, 136);
+    border: 2px solid rgb(65, 83, 136);
+    width: 48%; /* Ocupa quase metade do espaço */
+}
+
+/* Link "Finalizar Compra" (Destaque) */
+.acoes-carrinho a:last-child {
+    background-color: rgb(65, 83, 136);
+    color: white;
+    border: 2px solid rgb(65, 83, 136);
+    width: 48%; /* Ocupa quase metade do espaço */
+}
+
+/* Hover para o link de "Continuar Comprando" */
+.acoes-carrinho a:first-child:hover {
+    background-color: #e6e9f2;
+    text-decoration: none;
+}
+
+/* Hover para o link de "Finalizar Compra" */
+.acoes-carrinho a:last-child:hover {
+    background-color: rgb(50, 68, 115);
+    text-decoration: none;
+}
+
+/* Estilos para carrinho vazio */
+p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #666;
+    margin: 40px 0;
+}

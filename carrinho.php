@@ -1,8 +1,7 @@
 <?php
+include "header.php";
 session_start();
 $carrinho = $_SESSION['carrinho'] ?? [];
-
-
 ?>
 
 <!DOCTYPE html>
@@ -10,6 +9,8 @@ $carrinho = $_SESSION['carrinho'] ?? [];
 <head>
   <meta charset="UTF-8">
   <title>Carrinho</title>
+  <link rel="stylesheet" href="src/css/pagamento.css">
+  
 </head>
 <body>
 
@@ -18,7 +19,7 @@ $carrinho = $_SESSION['carrinho'] ?? [];
 <?php if (empty($carrinho)): ?>
   <p>Seu carrinho está vazio.</p>
 <?php else: ?>
-  <table border="1" cellpadding="10">
+  <table>
     <tr>
       <th>Produto</th>
       <th>Preço</th>
@@ -28,27 +29,31 @@ $carrinho = $_SESSION['carrinho'] ?? [];
     <?php
     $total = 0;
     foreach ($carrinho as $item):
-      $preco= $item['preco'];
+      $preco = (float)$item['preco'];
       $subtotal = $preco * $item['quantidade'];
-       
       $total += $subtotal;
     ?>
       <tr>
-        <td><?php echo htmlspecialchars($item['nome']); ?></td>
-        <td><?php echo $item['preco']; ?></td>
-        <td><?php echo $item['quantidade']; ?></td>
-       
+        <td><?= htmlspecialchars($item['nome']) ?></td>
+        <td>R$ <?= number_format($preco, 2, ',', '.') ?></td>
+        <td><?= $item['quantidade'] ?></td>
+        <td>R$ <?= number_format($subtotal, 2, ',', '.') ?></td>
       </tr>
     <?php endforeach; ?>
     <tr>
       <td colspan="3"><strong>Total Geral:</strong></td>
-      <td><strong>R$ <?php echo $subtotal; ?></strong></td>
+      <td><strong>R$ <?= number_format($total, 2, ',', '.') ?></strong></td>
     </tr>
   </table>
-<?php endif; ?>
+<?php endif; ?> <div class="butao">
+<button><a href="index.php">Continuar comprando</button>
+<button><a href="pagamento.php">Finalizar Compra</button></div>
 
-<a href="index.php">← Continuar comprando</a>
-
+<?php
+include "footer.php";
+?>
 </body>
+
 </html>
+
 
